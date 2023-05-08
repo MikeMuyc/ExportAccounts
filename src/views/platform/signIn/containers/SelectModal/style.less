@@ -1,0 +1,35 @@
+.modalContent {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  .companyItem {
+    height: 40px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left {
+      width: 75%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .right {
+      width: 25%;
+      color: #3051E6;
+      text-align: right;
+      .iconfont {
+        margin-left: 10px;
+      }
+    }
+    &:hover {
+      background-color: #f6faff;
+    }
+  }
+}
+.selectModal {
+  .ant-modal-body {
+    padding: 10px 24px;
+  }
+}

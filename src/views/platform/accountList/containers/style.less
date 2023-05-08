@@ -1,0 +1,348 @@
+@navWidth: 80px;
+.accountListLayer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .headerBG {
+    width: 100%;
+    background-image: linear-gradient(90deg, #5654F3 0%, #474DE1 100%);;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 0;
+
+    .h3 {
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .current {
+      color: #fff;
+      font-size: 14px;
+      margin-left: 50px;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .bottomLine {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+
+    .version {
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      color: #3051E6;
+    }
+  }
+}
+
+.uploadData-main {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+
+  .headerBG {
+    width: 100%;
+    background-image: linear-gradient(90deg, #5654F3 0%, #474DE1 100%);;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px 0;
+
+    h3 {
+      color: #fff;
+      font-size: 16px;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0;
+      padding: 0;
+      line-height: 54px;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+    }
+
+    .ui-main-select-name {
+      padding-left: 30px;
+      color: #FFFFFF;
+      width: 450px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: inline-block;
+      vertical-align: top;
+      line-height: 54px;
+      .link {
+        cursor: pointer;
+        user-select: none;
+      }
+    }
+
+    .user {
+      padding: 0 30px;
+
+      .icon-yonghuming {
+        margin-right: 5px;
+      }
+    }
+
+    .search {
+      .ant-input-search-icon, .ant-input-search-icon:hover, .ant-input-clear-icon, .ant-input-clear-icon:hover {
+        color: #fff;
+      }
+
+      .ant-input {
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 0 none;
+        color: #fff;
+        padding-left: 10px;
+      }
+
+      ::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      :-moz-placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      ::-moz-placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      :-ms-input-placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+
+    .nav {
+      flex: 1;
+      height: 44px;
+      position: relative;
+      display: flex;
+      z-index: 1;
+      overflow: hidden;
+
+      .itemNav {
+        display: flex;
+        align-items: center;
+        height: 44px;
+        cursor: pointer;
+        user-select: none;
+
+        .txt {
+          width: @navWidth;
+          text-align: center;
+          color: #fff;
+          font-size: 16px;
+          transition: .3s;
+        }
+
+        &.active > .txt {
+          color: #4C50E7;
+        }
+      }
+
+      .whiteHover {
+        height: 44px;
+        width: @navWidth;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background-color: #fff;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        transition: .3s;
+      }
+    }
+  }
+
+  .uploadData-top {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px 15px 0;
+
+    .uploadData-top-left {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 10px;
+      .uploadData-top-left-a {
+        color: #3051E6;
+        margin-right: 10px;
+        display: inline-flex;
+        align-items: center;
+        &:hover {
+          color: #3051E6;
+        }
+        i {
+          font-weight: bold;
+          font-size: 14px;
+          margin-right: 5px;
+          display: inline-block;
+          vertical-align: middle;
+          color: #3051E6;
+        }
+      }
+
+      .ant-input-suffix {
+        i {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .uploadData-top-right {
+      margin-bottom: 10px;
+      display: inline-flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      button {
+        padding: 0 12px;
+        margin-left: 12px;
+      }
+    }
+  }
+
+  .uploadData-table {
+    position: relative;
+    height: calc(100% - 126px);
+    margin: 0 15px;
+    overflow: hidden;
+    .ant-table-scroll {
+      .ant-table-body {
+        flex: none !important;
+      }
+    }
+    .ant-table {
+      color: #323232;
+    }
+    .ant-table-thead > tr > th {
+      color: #000;
+      background-color: #F2F3F7;
+      text-align: center !important;
+    }
+    .ant-table-bordered .ant-table-thead > tr > th, .ant-table-bordered .ant-table-tbody > tr > td {
+      border-color: #e2e2e2;
+    }
+    .ant-pagination {
+      border: 1px solid #E2E2E2;
+      padding: 8px 12px;
+      margin: -1px 0 0;
+      width: 100%;
+      float: none;
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      .ant-pagination-total-text{
+        position: absolute;
+        left: 12px;
+        top: 8px;
+      }
+    }
+    &.ssssData-table {
+      .ant-pagination {
+        z-index: 99999;
+        bottom: -45px;
+      }
+    }
+
+    tr {
+      th {
+        padding: 8px 16px;
+      }
+
+      td {
+        padding: 6px 12px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .table-operation {
+    text-align: center;
+
+    span {
+      cursor: pointer;
+      color: #20a0ff;
+
+      &:hover {
+        text-decoration: underline;
+        color: #4db3ff;
+      }
+    }
+
+    span + span {
+      margin-left: 10px;
+    }
+  }
+
+  .bottom {
+    width: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.searchBox {
+  position: relative;
+  .ant-input-affix-wrapper .ant-input:not(:last-child){
+    padding-right: 90px;
+  }
+  .ant-input-affix-wrapper .ant-input-suffix{
+    right: 8px;
+    .ant-input-clear-icon {
+      margin-right: 40px;
+    }
+  }
+  .batchSearch {
+    position: absolute;
+    right: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    color: #3051E6;
+    cursor: pointer;
+    user-select: none;
+  }
+  .iconSearch{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
+.batchSearchTips{
+  color: #F58418;
+  margin-bottom: 10px;
+}
+.batchSearchFooter {
+  margin-top: 20px;
+  text-align: center;
+}
+.icon-zhuyi {
+  color: #F58418;
+  margin-right: 4px;
+}
