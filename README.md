@@ -1,7 +1,7 @@
 # Guide Account Helper
 
 导账助手
-
+预览：https://mikemuyc.github.io/ExportAccounts/dist-20221019/index.html
 ## 开发环境
 
 1、安装 Node.js 的 LTS 版本，下载地址：
@@ -40,9 +40,7 @@ _注：开发服务器集成了热更新功能，修改内容保存后即时生�
 
 ```bash
 ndk lint
-```
-
-_注：推荐使用 [VS Code](https://code.visualstudio.com/Download) 编辑器并安装 EditeorConfig ， ESLint 和 Prettier 插件，可在编写过程中提供实时代码检测及代码格式化功能。_
+``
 
 4、编译打包代码：
 
@@ -52,13 +50,8 @@ ndk build
 
 _注：打包结果存放在 `dist` 目录中。_
 
-5、验证打包结果：
 
-```bash
-ndk start
-```
-
-6、提交变更。
+5、提交变更。
 
 _注：提交变更前，请确认代码正常可用并已编译打包。_
 
